@@ -66,18 +66,41 @@ function reloadIframe() {
     height: 460px;
     /* background-color: rgb(61, 60, 60); */
 
-    background: rgba(19, 19, 19, 0.966);
+    background: rgba(19, 19, 19, 0.96);
     /* Warna latar belakang dengan tingkat transparansi */
     backdrop-filter: blur(10px);
     /* Efek blur pada latar belakang */
     position: absolute;
-    top: 0;
+    top: 0px;
     transform-origin: bottom;
     transition: transform 0.5s ease;
 }
 
+.vnc-barrier::after,
+.vnc-barrier::before {
+    display: block;
+    content: "";
+    height: 90px;
+    background: rgba(19, 19, 19, 0.96);
+    backdrop-filter: blur(10px);
+
+}
+
+.vnc-barrier::after {
+    width: 187px;
+    position: absolute;
+    bottom: -90px;
+}
+
+.vnc-barrier::before {
+    width: 202px;
+    right: 0;
+    position: absolute;
+    bottom: -90px;
+}
+
 .vnc-barrier.up {
-    transform: translateY(-460px);
+    transform: translateY(-550px);
 }
 
 .menu {

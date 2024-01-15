@@ -22,7 +22,7 @@ function reloadIframe() {
 </script>
 
 <template>
-    <section class="container-vnc" :id="`iframe${indexLink}`" :class="{ active: indexLink === activeLink }">
+    <section class="container-vnc" :id="`iframe${indexLink}`" :class="{ active: indexLink === activeLink,  'up': isUp}">
         <iframe class="vnc-remote" :src="vncLink" ref="vncIframe"></iframe>
 
         <div class="vnc-barrier" :class="{ 'up': !isUp }"></div>
@@ -42,23 +42,29 @@ function reloadIframe() {
 <style scoped>
 .container-vnc {
     width: 900px;
-    height: 760px;
+    height: 740px;
     border: 2px solid white;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.5s ease;
+    transition: 0.5s ease;
 }
 
 .container-vnc.active {
     border-color: #e74c3c;
 }
 
+.container-vnc.up {
+    height: 550px;
+}
+
 .vnc-remote {
     width: 100%;
-    height: 100%;
+    height: 767px;
     border: none;
     margin: none;
     background-color: blueviolet;
+    position: absolute;
+    bottom: -22px;
 }
 
 .vnc-barrier {
@@ -66,10 +72,7 @@ function reloadIframe() {
     height: 460px;
     /* background-color: rgb(61, 60, 60); */
 
-    background: rgba(19, 19, 19, 0.96);
-    /* Warna latar belakang dengan tingkat transparansi */
-    backdrop-filter: blur(10px);
-    /* Efek blur pada latar belakang */
+    background: black;
     position: absolute;
     top: 0px;
     transform-origin: bottom;
@@ -81,8 +84,7 @@ function reloadIframe() {
     display: block;
     content: "";
     height: 90px;
-    background: rgba(19, 19, 19, 0.96);
-    backdrop-filter: blur(10px);
+    background: black;
 
 }
 

@@ -66,10 +66,7 @@ function reloadIframe() {
     height: 460px;
     /* background-color: rgb(61, 60, 60); */
 
-    background: rgba(19, 19, 19, 0.96);
-    /* Warna latar belakang dengan tingkat transparansi */
-    backdrop-filter: blur(10px);
-    /* Efek blur pada latar belakang */
+    background: black;
     position: absolute;
     top: 0px;
     transform-origin: bottom;
@@ -81,8 +78,7 @@ function reloadIframe() {
     display: block;
     content: "";
     height: 90px;
-    background: rgba(19, 19, 19, 0.96);
-    backdrop-filter: blur(10px);
+    background: black;
 
 }
 

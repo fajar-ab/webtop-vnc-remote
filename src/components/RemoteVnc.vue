@@ -42,7 +42,7 @@ function reloadIframe() {
 <style scoped>
 .container-vnc {
     width: 900px;
-    height: 550px;
+    height: 760px;
     border: 2px solid white;
     position: relative;
     overflow: hidden;

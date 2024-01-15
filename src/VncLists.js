@@ -11,6 +11,5 @@ export const vncList = [
     { vncLink: 'https://fwtkyf-3000.csb.app' },
     { vncLink: 'https://knh8vr-3000.csb.app' },
     { vncLink: 'https://6tj45l-3000.csb.app' },
-    // { vncLink: 'https://fwtkyf-3000.csb.app', id: '2' },
     // ... (tambahkan item lainnya sesuai kebutuhan)
 ];

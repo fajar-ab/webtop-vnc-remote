@@ -22,7 +22,7 @@ function reloadIframe() {
 </script>
 
 <template>
-    <section class="container-vnc" :id="`iframe${indexLink}`" :class="{ active: indexLink === activeLink }">
+    <section class="container-vnc" :id="`iframe${indexLink}`" :class="{ active: indexLink === activeLink, up: isUp }">
         <iframe class="vnc-remote" :src="vncLink" ref="vncIframe"></iframe>
 
         <div class="vnc-barrier" :class="{ 'up': !isUp }"></div>
@@ -46,26 +46,32 @@ function reloadIframe() {
     border: 2px solid white;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.5s ease;
+    transition: 0.5s ease;
 }
 
 .container-vnc.active {
     border-color: #e74c3c;
 }
 
+.container-vnc.up {
+    height: 275px;
+    /* height: 550px; */
+}
+
 .vnc-remote {
     width: 100%;
-    height: 100%;
+    height: 550px;
     border: none;
     margin: none;
     background-color: blueviolet;
+    position: absolute;
+    bottom: 0;
 }
 
 .vnc-barrier {
     width: 100%;
-    height: 460px;
-    /* background-color: rgb(61, 60, 60); */
-
+    /* height: 460px; */
+    height: 185px;
     background: black;
     position: absolute;
     top: 0px;

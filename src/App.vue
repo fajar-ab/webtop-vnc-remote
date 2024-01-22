@@ -40,8 +40,8 @@ body {
 
 .fixed-links {
   position: fixed;
-  top: 60%;
-  left: 50%;
+  top: 55%;
+  left: 800px;
   transform: translate(-50%, -50%);
   margin: 10px;
 

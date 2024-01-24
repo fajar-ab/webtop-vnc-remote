@@ -79,7 +79,7 @@ function reloadIframe() {
   width: 100%;
   /* height: 460px; */
   height: 185px;
-  background: black;
+  background: white;
   position: absolute;
   top: 0px;
   transform-origin: bottom;
@@ -91,7 +91,7 @@ function reloadIframe() {
   display: block;
   content: "";
   height: 90px;
-  background: black;
+  background: white;
 }
 
 .vnc-barrier::after {
@@ -130,7 +130,7 @@ function reloadIframe() {
 }
 
 .icon {
-  color: #ffff87;
+  color: salmon;
   transition: transform 0.5s ease;
 }
 

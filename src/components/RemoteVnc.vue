@@ -57,7 +57,7 @@ function reloadIframe() {
 }
 
 .container-vnc.active {
-  border-color: #e74c3c;
+  border-color: salmon;
 }
 
 .container-vnc.up {

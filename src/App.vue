@@ -1,27 +1,35 @@
 <script setup>
-import { ref } from 'vue';
-import RemoteVnc from './components/RemoteVnc.vue';
-import RemoteVncLink from './components/RemoteVncLink.vue';
-import { vncList } from './VncLists';
+import { ref } from "vue";
+import RemoteVnc from "./components/RemoteVnc.vue";
+import RemoteVncLink from "./components/RemoteVncLink.vue";
+import { vncList } from "./VncLists";
 
-const activeIndex = ref(0)
+const activeIndex = ref(0);
 
 function handleClick(n) {
-  activeIndex.value = n
+  activeIndex.value = n;
 }
-
 </script>
-
 
 <template>
   <div class="container">
-    <RemoteVnc v-for="(item, index) in vncList" :key="index" :vncLink="item.vncLink" :index-link="index"
-      :active-link="activeIndex" />
+    <RemoteVnc
+      v-for="(item, index) in vncList"
+      :key="index"
+      :vncLink="item.vncLink"
+      :index-link="index"
+      :active-link="activeIndex"
+    />
   </div>
 
   <div class="fixed-links">
-    <RemoteVncLink v-for="(item, index ) in vncList" :key="index" :index-link="index" :active-link="activeIndex"
-      @click="handleClick(index)" />
+    <RemoteVncLink
+      v-for="(item, index) in vncList"
+      :key="index"
+      :index-link="index"
+      :active-link="activeIndex"
+      @click="handleClick(index)"
+    />
   </div>
 </template>
 
@@ -50,4 +58,3 @@ body {
   gap: 5px;
 }
 </style>
-

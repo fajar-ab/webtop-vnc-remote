@@ -13,20 +13,27 @@ const props = defineProps(['indexLink', 'activeLink'])
 
 <style scoped>
 .iframe-link {
-    background-color: #3498db;
+    background-color: #333;
     color: #fff;
-    padding: 15px;
+    padding: 10px;
+    min-width: 40px;
     text-decoration: none;
     text-align: center;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
 }
 
 .iframe-link:hover {
-    background-color: #2980b9;
+    background-color: #444;
+    border-color: #3498db;
 }
 
 .iframe-link.active {
     background-color: #e74c3c;
+    color: white;
+    transform: scale(1.1);
 }
 </style>

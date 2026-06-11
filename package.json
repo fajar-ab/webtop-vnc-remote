@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "build": "^0.1.4",
     "vue": "^3.3.11",
     "vue3-smooth-scroll": "^0.8.1"
   },

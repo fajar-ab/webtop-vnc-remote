@@ -4,7 +4,6 @@ import { ref, defineProps } from "vue";
 const props = defineProps({
     vncLink: String,
     indexLink: Number,
-    activeLink: Number,
     label: String
 });
 
@@ -34,7 +33,7 @@ defineExpose({ reloadIframe, togglePower, toggleUp: () => isUp.value = !isUp.val
 </script>
 
 <template>
-    <section class="container-vnc" :id="`iframe${indexLink}`" :class="{ active: indexLink === activeLink, up: isUp, off: !isPowered }">
+    <section class="container-vnc" :id="`iframe${indexLink}`" :class="{ up: isUp, off: !isPowered }">
         <div class="vnc-header">
             <span class="vnc-label">{{ label || `#${indexLink + 1}` }}</span>
             <span class="vnc-status" :class="{ online: isPowered }">
@@ -76,7 +75,6 @@ defineExpose({ reloadIframe, togglePower, toggleUp: () => isUp.value = !isUp.val
     border: 1px solid #333; position: relative; overflow: hidden;
     transition: all 0.5s ease; background-color: #050505;
 }
-.container-vnc.active { border-color: #00f2ff; border-width: 2px; box-shadow: 0 0 15px rgba(0, 242, 255, 0.3); }
 .container-vnc.up { aspect-ratio: 16 / 4.5; }
 .container-vnc.off { border-style: dashed; border-color: #555; }
 

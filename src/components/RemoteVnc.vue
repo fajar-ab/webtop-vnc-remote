@@ -92,7 +92,7 @@ defineExpose({ reloadIframe, togglePower, toggleUp: () => isUp.value = !isUp.val
 
 @keyframes blink { 50% { opacity: 0.5; } }
 
-.vnc-remote { width: 100%; height: 100%; border: none; background-color: #000; }
+.vnc-remote { width: 100%; aspect-ratio: 16 / 9; border: none; background-color: #000; position: absolute; bottom: 0; left: 0; }
 
 .vnc-placeholder {
     width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
@@ -115,9 +115,9 @@ defineExpose({ reloadIframe, togglePower, toggleUp: () => isUp.value = !isUp.val
 .vnc-barrier::after,
 .vnc-barrier::before {display: block; content: ""; height: 90px; background: black;}
 
-.vnc-barrier::after {width: 187px; position: absolute; bottom: -90px;}
+.vnc-barrier::after {width: 190px; position: absolute; bottom: -90px;}
 
-.vnc-barrier::before {width: 202px; right: 0; position: absolute; bottom: -90px;}
+.vnc-barrier::before {width: 198px; right: 0; position: absolute; bottom: -90px;}
 
 .vnc-barrier.up { transform: translateY(-260px); }
 
